@@ -4,67 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Base - Register</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        form {
-            max-width: 300px;
-            margin: 0 auto;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #555;
-        }
-
-        input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Bank</title>
 </head>
 
 <body>
-<h1>Register</h1>
-<form method="post" th:action="@{/register}" id="registerForm">
+<h1>Registration</h1>
+<form method="post" th:action="@{/register}">
     <label th:for="username">Username:</label>
     <input type="text" name="username" required><br>
 
     <label th:for="password">Password:</label>
     <input type="password" name="password" required><br>
-    <div th:if="${error}" style="color: red;">
+    <div th:if="${error}">
         <p th:text="${error}"></p>
     </div>
 
 
     <input type="submit" value="Register">
 
-    <a href="javascript:history.back()">Назад</a>
+    <a th:href="@{/login}">Back</a>
 </form>
 </body>
 
