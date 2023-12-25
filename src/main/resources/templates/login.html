@@ -4,61 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Base</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        form {
-            max-width: 300px;
-            margin: 0 auto;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #555;
-        }
-
-        input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            background-color: #4caf50;
-            color: white;
-            cursor: pointer;
-        }
-
-        p {
-            color: #777;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        div {
-            color: #ff0000;
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Bank</title>
 </head>
 
 <body>
-<h1>Log in to the Car Base Application</h1>
+<h1>Log in to the Bank Application</h1>
 <div th:if="${param.error}">Unable to login. Check your username and password.</div>
 <p>New here? Click <a th:href="@{/register}">here</a> to register</p>
 <form method="post" th:action="@{/login}" id="loginform">
