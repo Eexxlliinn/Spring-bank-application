@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Bank</title>
+</head>
+<body>
+<h1>Admin Cabinet</h1>
+<div class="container">
+    <p>Click <a th:href="@{/adminCabinet/showAccounts}">here</a> to see accounts</p>
+    <p>Click <a th:href="@{/adminCabinet/block}">here</a> to block client's account</p>
+    <p>Click <a th:href="@{/adminCabinet/unblock}">here</a> to unblock client's account</p>
+    <br>
+    <div>
+        <a th:href="@{/cabinet}" class="menu-button">
+            Switch to Client
+        </a>
+    </div>
+    <div>
+        <a th:href="@{/logout}" class="menu-button">
+            Logout
+        </a>
+    </div>
+</div>
+</body>
+</html>
