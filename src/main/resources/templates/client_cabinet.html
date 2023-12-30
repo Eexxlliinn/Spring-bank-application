@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Client Cabinet</h1>
+<p>Click <a th:href="@{/cabinet/showInfo}">here</a> to see client's information</p>
+<p>Click <a th:href="@{/cabinet/setInfo}">here</a> to add client's information</p>
+<br>
+<p>Click <a th:href="@{/cabinet/showAccounts}">here</a> to see client's accounts</p>
+<p>Click <a th:href="@{/cabinet/setAccounts}">here</a> to add client's accounts</p>
+<br>
+<p>Click <a th:href="@{/cabinet/showCards}">here</a> to see client's cards</p>
+<p>Click <a th:href="@{/cabinet/setCards}">here</a> to add client's cards</p>
+<br>
+<p>Click <a th:href="@{/cabinet/makeTransaction}">here</a> to make transaction</p>
+<p>Click <a th:href="@{/cabinet/showTransactions}">here</a> to see client's transactions</p>
+<br>
+<p>Click <a th:href="@{/cabinet/block}">here</a> to block account</p>
+
+<a th:href="@{/adminCabinet}" class="menu-button">
+    Switch to Admin
+</a>
+<a th:href="@{/logout}" class="menu-button">
+    Logout
+</a>
+</body>
+</html>
