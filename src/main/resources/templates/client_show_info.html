@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Bank</title>
+
+</head>
+
+<body>
+<h1>Client Information</h1>
+
+<div class="client-info" th:if="${client != null}">
+    <p><strong>Full Name:</strong> <span th:text="${client.fullName} ?: 'N/A'"></span></p>
+    <p><strong>Age:</strong> <span th:text="${client.age} ?: 'N/A'"></span></p>
+    <p><strong>Address:</strong> <span th:text="${client.address} ?: 'N/A'"></span></p>
+    <p><strong>Phone Number:</strong> <span th:text="${client.phoneNumber} ?: 'N/A'"></span></p>
+
+</div>
+
+<div th:unless="${client != null}">
+    <p>No client information available</p>
+</div>
+
+
+<br><br>
+
+<a th:href="@{/cabinet}">Back</a>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <title>Bank</title>
+
+</head>
+
+<body>
+<h1>Client Set Information</h1>
+<form th:action="@{/cabinet/setInfo}" method="post" id="clientForm">
+    <fieldset>
+        <legend>Client Information</legend>
+
+        <label for="fullName">Full name:</label>
+        <input type="text" id="fullName" name="fullName" required><br>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br>
+
+        <label for="phoneNumber">Phone number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" required><br>
+
+
+    </fieldset>
+
+    <input type="submit" class="save-button" value="Save">
+    <a th:href="@{/cabinet}">Back</a>
+</form>
+</body>
+
+</html>

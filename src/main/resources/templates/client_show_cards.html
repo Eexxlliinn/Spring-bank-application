@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Bank</title>
+</head>
+<body>
+<h1>Manage Cards</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Card Number</th>
+        <th>Card Expiration</th>
+        <th>Card CVV</th>
+        <th>Card Owner</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="card : ${cards}">
+        <td th:text="${card.cardNumber}"></td>
+        <td th:text="${card.cardExpiration}"></td>
+        <td th:text="${card.cardCVV}"></td>
+        <td th:text="${card.client.fullName}"></td>
+
+    </tr>
+    </tbody>
+</table>
+<a th:href="@{/cabinet}">Back</a>
+</form>
+</body>
+</html>

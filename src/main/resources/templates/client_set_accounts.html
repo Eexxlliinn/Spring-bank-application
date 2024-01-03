@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <title>Bank</title>
+
+</head>
+
+<body>
+<h1>Create new account:</h1>
+<div class="accountInfo" th:if="${client != null}">
+  <form th:action="@{/cabinet/setAccounts}" method="post" id="accountForm">
+    <fieldset>
+      <legend>Account Information</legend>
+
+      <label for="accountNumber">Account Number:</label>
+      <input type="text" id="accountNumber" name="accountNumber" required><br>
+
+      <label for="currency">Currency:</label>
+      <input type="text" id="currency" name="currency" required><br>
+
+
+    </fieldset>
+
+    <input type="submit" class="save-button" value="Save">
+  </form>
+</div>
+<div th:unless="${client != null}">
+  <p>No client information available</p>
+</div>
+  <a th:href="@{/cabinet}">Back</a>
+
+</body>
+
+</html>
+
+</body>
+</html>

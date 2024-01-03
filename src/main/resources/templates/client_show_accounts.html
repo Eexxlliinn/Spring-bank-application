@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Bank</title>
+</head>
+<body>
+<h1>Client's Accounts</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Account Number</th>
+        <th>Money Amount</th>
+        <th>Currency</th>
+        <th>Status</th>
+        <th>Block</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="account : ${accounts}">
+        <td th:text="${account.accountNumber}"></td>
+        <td th:text="${account.moneyAmount}"></td>
+        <td th:text="${account.currency}"></td>
+        <td th:text="${account.status}"></td>
+        <td th:text="${account.block}"></td>
+
+    </tr>
+    </tbody>
+</table>
+<a href="javascript:history.back()">Back</a>
+</form>
+</body>
+</html>
